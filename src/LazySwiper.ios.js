@@ -42,7 +42,7 @@ class LazySwiper extends React.Component{
 
         return <ScrollView
             ref={sv => this._scrollView = sv}
-            onScroll={() => this._scrolling = true}
+            onScroll={() => this._scrolling = this._scrolling && true}
             pagingEnabled={true}
             contentOffset={{x: currentIndex === 0 ? 0 : width, y: 0}}
             showsHorizontalScrollIndicator={false}
